@@ -4,16 +4,16 @@
 
 Um protótipo de sistema web para gerenciamento de aluguéis, focado em pequenos proprietários. O sistema resolve a dificuldade da gestão manual de imóveis, inquilinos e controle de pagamentos.
 
-[cite_start]Este projeto foi desenvolvido como atividade para a disciplina de **Engenharia e Projeto de Software** [cite: 1] [cite_start](Professor Dr. Romes Heriberto [cite: 3]).
+Este projeto foi desenvolvido como atividade para a disciplina de **Engenharia e Projeto de Software**  (Professor Dr. Romes Heriberto ).
 
 ## ✨ Funcionalidades Principais
 
 O sistema permite ao proprietário (Usuário):
 
-* [cite_start]**RF001:** Cadastrar e gerenciar seus Imóveis[cite: 38].
-* [cite_start]**RF002:** Cadastrar e gerenciar seus Inquilinos[cite: 47].
+* **RF001:** Cadastrar e gerenciar seus Imóveis[cite: 38].
+* **RF002:** Cadastrar e gerenciar seus Inquilinos[cite: 47].
 * **RF003:** Associar um inquilino a um imóvel, criando um contrato.
-* [cite_start]**RF004:** Marcar o pagamento mensal do aluguel como "Pago" (check-in)[cite: 47].
+* **RF004:** Marcar o pagamento mensal do aluguel como "Pago" (check-in)[cite: 47].
 * **RF005:** Gerar um relatório básico de pagamentos em formato PDF.
 
 ## 🛠️ Tecnologias Utilizadas
