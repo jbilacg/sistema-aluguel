@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SGA - Gestão de Aluguéis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="login-container">
+        <h2>SGA - Login</h2>
+        <input type="email" id="login-email" placeholder="E-mail">
+        <input type="password" id="login-password" placeholder="Senha">
+        <button id="btn-login">Entrar</button>
+    </div>
+
+    <div id="app-container" style="display: none;">
+        <header>
+            <h1>SGA - Painel do Proprietário</h1>
+            <button id="btn-logout">Sair</button>
+        </header>
+
+        <main>
+            <section id="dashboard">
+                <h2>Pagamentos do Mês Atual</h2>
+                <div id="dashboard-list">
+                    </div>
+            </section>
+
+            <section>
+                <button id="btn-gerar-relatorio">Gerar Relatório PDF (RF005)</button>
+            </section>
+
+            <div class="cadastro-forms">
+                <form id="form-add-imovel">
+                    <h3>Cadastrar Novo Imóvel (RF001)</h3>
+                    <input type="text" id="imovel-endereco" placeholder="Endereço" required>
+                    <input type="number" id="imovel-valor" placeholder="Valor do Aluguel" required>
+                    <button type="submit">Salvar Imóvel</button>
+                </form>
+
+                <form id="form-add-inquilino">
+                    <h3>Cadastrar Novo Inquilino (RF002)</h3>
+                    <input type="text" id="inquilino-nome" placeholder="Nome Completo" required>
+                    <input type="text" id="inquilino-cpf" placeholder="CPF" required>
+                    <button type="submit">Salvar Inquilino</button>
+                </form>
+            </div>
+
+            <section>
+                <form id="form-add-contrato">
+                    <h3>Associar Inquilino a Imóvel (RF003)</h3>
+                    <select id="select-imovel" required>
+                        <option value="">Selecione um Imóvel Disponível</option>
+                    </select>
+                    <select id="select-inquilino" required>
+                        <option value="">Selecione um Inquilino</option>
+                    </select>
+                    <button type="submit">Criar Contrato</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
