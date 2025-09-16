@@ -54,5 +54,5 @@ Para rodar este projeto localmente ou em seu ambiente de desenvolvimento (como o
 
 ## ✒️ Autores
 
-* [cite_start]Fulano de tal [cite: 5]
-* [cite_start]Beltrano da Silva [cite: 6]
+* Jéssica Bilac Gaspareto
+* 
