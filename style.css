@@ -1,0 +1,126 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+#login-container {
+    max-width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#login-container h2 {
+    text-align: center;
+}
+
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="number"],
+select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box; /* Garante que padding não afete a largura */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#app-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #007bff;
+}
+
+header button {
+    width: auto;
+    background-color: #dc3545;
+}
+
+section {
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.cadastro-forms {
+    display: flex;
+    gap: 20px; /* Espaço entre os formulários */
+}
+
+.cadastro-forms form {
+    flex: 1; /* Faz os formulários dividirem o espaço */
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Estilo do Dashboard (RF004) */
+#dashboard-list .item-pagamento {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+#dashboard-list .item-pagamento:last-child {
+    border-bottom: none;
+}
+
+#dashboard-list .info {
+    font-size: 1.1em;
+}
+
+#dashboard-list .info span {
+    font-weight: bold;
+    color: #0056b3;
+}
+
+#dashboard-list .btn-pagar {
+    width: auto;
+    padding: 8px 12px;
+}
+
+/* Classe para status "Pago" */
+#dashboard-list .item-pagamento.pago {
+    background-color: #e6ffe6;
+}
+
+#dashboard-list .item-pagamento.pago .btn-pagar {
+    background-color: #28a745;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
