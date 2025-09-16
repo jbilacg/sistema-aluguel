@@ -54,4 +54,9 @@ Para rodar este projeto, você precisa configurar sua própria instância do Fir
 * **Cloud Firestore:** No Console, crie um banco de dados e inicie no **"Modo de Teste"**.
 
 **5. Execute o Projeto:**
-* Abra o `index.html` usando uma extensão como o "Live Server" (VS Code) ou o
+* Abra o `index.html` usando uma extensão como o "Live Server" (VS Code) ou o recurso de "Preview" do seu ambiente de desenvolvimento (como o Firebase Studio / IDX).
+* **Importante:** O projeto não funcionará se você apenas clicar duas vezes no `index.html` (abrindo-o como `file://`), pois o navegador bloqueará a conexão com o Firebase por segurança.
+
+## ✒️ Autores
+
+* Jéssica Bilac Gaspareto
