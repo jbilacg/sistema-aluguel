@@ -4,17 +4,28 @@
 
 Um protótipo de sistema web para gerenciamento de aluguéis, focado em pequenos proprietários. O sistema resolve a dificuldade da gestão manual de imóveis, inquilinos e controle de pagamentos.
 
-Este projeto foi desenvolvido como atividade para a disciplina de **Engenharia e Projeto de Software**  (Professor Dr. Romes Heriberto ).
+Este projeto foi desenvolvido como atividade para a disciplina de **Engenharia e Projeto de Software** (Professor Dr. Romes Heriberto).
 
-## ✨ Funcionalidades Principais
+## ✨ Funcionalidades Principais (Requisitos)
 
-O sistema permite ao proprietário (Usuário):
-
-* **RF001:** Cadastrar e gerenciar seus Imóveis[cite: 38].
-* **RF002:** Cadastrar e gerenciar seus Inquilinos[cite: 47].
+* **RF001:** Cadastrar e gerenciar seus Imóveis.
+* **RF002:** Cadastrar e gerenciar seus Inquilinos.
 * **RF003:** Associar um inquilino a um imóvel, criando um contrato.
-* **RF004:** Marcar o pagamento mensal do aluguel como "Pago" (check-in)[cite: 47].
+* **RF004:** Marcar o pagamento mensal do aluguel como "Pago" (check-in).
 * **RF005:** Gerar um relatório básico de pagamentos em formato PDF.
+
+## 🗂️ Arquivos do Projeto
+
+Este repositório contém os 3 arquivos principais que compõem o protótipo funcional:
+
+* **`index.html`**: O arquivo principal. Contém a estrutura HTML da tela de login e do painel de controle principal. É ele que carrega os scripts do Firebase e o `app.js`.
+* **`style.css`**: A folha de estilos. Contém todo o CSS para dar ao sistema uma aparência amigável e limpa (NF001 - Usabilidade).
+* **`app.js`**: O "cérebro" do protótipo. Este arquivo JavaScript contém toda a lógica para:
+    * Conectar ao Firebase (usando o `firebaseConfig`).
+    * Gerenciar o login e logout do usuário.
+    * Realizar os cadastros (Imóvel, Inquilino, Contrato).
+    * Renderizar o painel de pagamentos (RF004).
+    * Gerar o relatório em PDF (RF005).
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -22,37 +33,25 @@ O sistema permite ao proprietário (Usuário):
 * **Backend (BaaS):** Firebase
 * **Banco de Dados:** Cloud Firestore
 * **Autenticação:** Firebase Authentication
-* **Relatórios:** jsPDF
+* **Relatórios:** jsPDF (carregado via CDN)
 
 ## 🚀 Como Executar o Protótipo
 
-Para rodar este projeto localmente ou em seu ambiente de desenvolvimento (como o Firebase Studio / IDX), você precisa configurar sua própria instância do Firebase.
+Para rodar este projeto, você precisa configurar sua própria instância do Firebase.
 
 **1. Crie um Projeto no Firebase:**
-* Acesse o [Console do Firebase](https://console.firebase.google.com/).
-* Clique em "Criar um novo projeto do Firebase".
-* Siga os passos de configuração.
+* Acesse o [Console do Firebase](https://console.firebase.google.com/) e crie um novo projeto.
 
 **2. Crie um App Web e Obtenha o `firebaseConfig`:**
-* Dentro do seu novo projeto, no painel principal, clique no ícone `</>` (Adicionar app Web).
-* Registre o app.
-* O Firebase fornecerá um objeto `const firebaseConfig = { ... };`.
-* **Copie** este objeto.
+* No painel do seu projeto, clique no ícone `</>` (Adicionar app Web).
+* Registre o app e copie o objeto `const firebaseConfig = { ... };`.
 
 **3. Cole o `firebaseConfig`:**
-* Abra o arquivo `app.js` do projeto.
-* **Cole** o objeto `firebaseConfig` no topo do arquivo, substituindo o placeholder.
+* Abra o arquivo `app.js` e cole o seu `firebaseConfig` no local indicado (substituindo o placeholder).
 
 **4. Configure os Serviços do Firebase:**
-* **Authentication:** No menu lateral do Console, vá em "Authentication" > "Sign-in method" e ative o provedor **"E-mail/senha"**.
-* **Crie um Usuário:** Na aba "Users" do Authentication, crie um usuário de teste (ex: `admin@admin.com`, senha `123456`) para que você possa logar.
-* **Cloud Firestore:** No menu lateral, vá em "Cloud Firestore" > "Criar banco de dados" e inicie no **"Modo de Teste"** (para permitir leituras e escritas durante o desenvolvimento).
+* **Authentication:** No Console, ative o provedor **"E-mail/senha"**. Depois, na aba "Users", crie seu usuário de login (o "proprietário").
+* **Cloud Firestore:** No Console, crie um banco de dados e inicie no **"Modo de Teste"**.
 
 **5. Execute o Projeto:**
-* Se estiver usando o Firebase Studio / Project IDX, ele fornecerá um link de "Preview" ou um botão "Run" (Executar) que cria um servidor web.
-* Se estiver rodando localmente (ex: no VS Code), abra o `index.html` usando uma extensão como o "Live Server" (não funciona clicando duas vezes no arquivo `index.html` por causa das restrições de segurança do navegador).
-
-## ✒️ Autores
-
-* Jéssica Bilac Gaspareto
-  
+* Abra o `index.html` usando uma extensão como o "Live Server" (VS Code) ou o
